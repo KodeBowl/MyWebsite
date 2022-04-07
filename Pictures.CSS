@@ -1,0 +1,104 @@
+:root {/*For Global vars*/
+    --width-val:40%; /*Not using for intermediary headers*/
+}
+
+/*For the header area to stay at the top*/
+.header { /*Just stylizing the header*/
+    font-family: 'Courier New';
+    width: 100%; /*Sets the header to full screen width*/
+    
+    padding: 45px 5px; /*Sets a border around the header's text*/
+    background: #cecece;
+    box-shadow: 0px 1px 5px 1px gray;/*No issues but, seenms to put a hidden box behind the visible header that only becomes visible when the margin-left (below) value is higher*/
+    margin-left: -10px; /*This and the following 2 are just to hide the top, left and right edge shadows*/
+    margin-right: -10px;
+    margin-top: -5px;
+    top: 0;
+    position: fixed;
+}
+
+.small { /*For the iPhone X"R" title*/
+    font-size: 15px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#Scrlbtn {
+    display: none; /*Compared to 'none' this actually displays the button, evern after changing somethings below*/
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99; /*Not sure what this does*/
+    font-family: Arial;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #f15f15;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+#Scrlbtn:hover {
+    background-color:#555;
+}
+
+.link {
+    font-family: Arial;
+    font-size: 20px;
+}
+
+body {
+    background-color: #cecece;
+    padding-top: 125px;
+}
+
+
+h3 {
+    font-family: Arial;
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+
+img {
+    /*Add a way to center images*/
+    width: var(--width-val); /*Sets the actual size of image, rpobably rel. to browser size*/
+    display: block; /*Not sure*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    font-size:18px;
+    font-family: Arial;
+    width: var(--width-val); /*Sets the actual size of image, rpobably rel. to browser size*/
+    display: block;
+    margin-left: auto; /*Probably for making the area to the left of the image scale dynamically*/
+    margin-right: auto;
+    margin-top: 0px;
+}
+
+@media screen and (max-width: 840px) {
+    /*If the browser size is 800px or smaller (phone) then make the image and explanatory paragraph take up more of the screen*/
+    /*Put this down here becasue it might have to be after the initial declaration of the things affected (img and p)*/
+    img, p, h3 {
+        width: 80%;
+    }
+    #Scrlbtn {
+        /*Works for resizing button based on screen width*/
+        padding: 10px;
+        right: 5px;
+    }
+    
+    
+}
