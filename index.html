@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="Pictures.CSS">
+    <title>Pictures</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--For sclaing page, but not sure for what exactly-->
+</head>
+<body>
+    <!--This div section and the class it uses and the id are imp for the static header effect-->
+
+    <div class="header" id="myHeader">
+        <h3 class="header" style="text-align:center">My Pictures</h3>
+    </div>
+
+
+    <!--A button to scroll back to top-->
+    <button onclick="topFunction()" id="Scrlbtn" title="Go to top">Top</button>    
+
+    <!--Scritp for scroll button-->
+    <script>
+        var scrollButton = document.getElementById("Scrlbtn");
+
+        let width = window.innerWidth;
+
+        //Show the button 1500px from the top of the page
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+
+            //First if is for checking the window size so the button shows up at the same place on diff. screens but, it's probably not working
+            if (width > 840) {
+                //What's the not part for in this if (why are both =):
+                if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                    scrollButton.style.display = "block";
+                }
+                else {
+                    scrollButton.style.display = "none";
+                }
+            }
+            else {
+                if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                    scrollButton.style.display = "block";
+                }
+                else {
+                    scrollButton.style.display = "none";
+                }
+            }
+            
+                
+        }
+
+
+        //Clicking the button scrolls the page back up
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    <!--Placing images in divs for code reability-->
+
+
+
+    <h3>Taken on an iPod 5:</h3>
+    <div>
+        <img src="Folder1/[For Backgrounds] Clouds-From-Space-ISS-6.jpg" alt="Dew on Grass">
+        <p> </p>
+    </div>
+
+    <div>
+        <img src="Folder1/[For Backgrounds] Clouds-From-Space-ISS-6.jpg" alt="News papers">
+        <p> </p>
+        
+    </div>
+
+    <div>
+        <img src="Folder1/[For Backgrounds] Clouds-From-Space-ISS-6.jpg" alt="News papers">
+        <p> </p>
+       
+    </div>
+
+    <h3>Taken on an iPhone X<sub class="small">R</sub> (manual mode):</h3>
+    <div>
+        <img src="Folder1/[For Backgrounds] Clouds-From-Space-ISS-6.jpg" alt="News papers">
+        <p> </p>
+        
+    </div>
+
+
+    <h3>Taken on a Cannon PowerShot A590 IS:</h3>
+    <div>
+        <img src="Folder1/[For Backgrounds] Clouds-From-Space-ISS-6.jpg" alt="News papers">
+        <p> </p>
+        
+    </div>
+
+
+    <div>
+        <img src="Folder1/[For Backgrounds] Clouds-From-Space-ISS-6.jpg" alt="News papers">
+        <p> </p>
+        
+    </div>
+
+
+
+</body>
+</html>
